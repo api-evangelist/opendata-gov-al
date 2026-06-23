@@ -1,0 +1,67 @@
+aid: opendata-gov-al
+name: opendata.gov.al (Open Data Albania)
+description: >-
+  opendata.gov.al is the national government open-data portal for Albania (Open Data Albania). It is a
+  custom, DCAT-AP-compliant platform (an Angular single-page-app front end over a bespoke REST API) with
+  a dedicated SPARQL query endpoint, and it is harvested into the EU data portal (data.europa.eu). It is
+  not CKAN or DKAN. Read endpoints live under the /api prefix using PascalCase, action-style routes.
+kind: government
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/opendata-gov-al/refs/heads/main/apis.yml
+tags:
+  - Open Data
+  - Custom Platform
+  - DCAT-AP
+  - SPARQL
+  - Linked Data
+  - Government Data
+  - National Government
+  - Albania
+  - Europe
+created: '2026-06-23'
+modified: '2026-06-23'
+specificationVersion: '0.19'
+apis:
+  - aid: opendata-gov-al:rest
+    name: Open Data Albania REST API
+    description: >-
+      Bespoke REST API for opendata.gov.al at same-origin /api, with action-style routes. Known
+      endpoints include POST /api/Dataset/filter (dataset search/listing), GET /api/Dataset/get/{slug},
+      GET /api/DcatCategory, GET /api/Institution, and GET /api/Dataset/getMostAccessedDataSets. No
+      public OpenAPI/Swagger document was located. Endpoint surface verified from the SPA JavaScript
+      bundle; the live site sits behind an F5 BIG-IP WAF that blocks non-browser clients.
+    humanURL: https://opendata.gov.al/
+    baseURL: https://opendata.gov.al/api
+    tags:
+      - REST
+      - Open Data
+      - Catalog
+      - DCAT-AP
+      - JSON
+    properties:
+      - type: Website
+        url: https://opendata.gov.al/
+      - type: x-api-endpoint
+        url: https://opendata.gov.al/api/Dataset/filter
+  - aid: opendata-gov-al:sparql
+    name: Open Data Albania SPARQL endpoint
+    description: >-
+      SPARQL query endpoint for the linked-data / DCAT-AP graph powering the portal.
+    humanURL: https://opendata.gov.al/sparQL-search
+    baseURL: https://opendata.gov.al/api/Sparql
+    tags:
+      - SPARQL
+      - Linked Data
+      - RDF
+      - DCAT-AP
+    properties:
+      - type: x-sparql-endpoint
+        url: https://opendata.gov.al/api/Sparql
+common:
+  - type: Website
+    url: https://opendata.gov.al/
+  - type: Review
+    url: review.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

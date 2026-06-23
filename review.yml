@@ -1,0 +1,26 @@
+name: opendata.gov.al
+description: Open Data Albania API surface verification for APIs.json cataloging.
+url: https://raw.githubusercontent.com/api-evangelist/opendata-gov-al/refs/heads/main/review.yml
+created: '2026-06-23'
+modified: '2026-06-23'
+reviews:
+  - date: '2026-06-23'
+    rating: 3
+    summary: >-
+      Open Data Albania is a custom, DCAT-AP-compliant national portal (Angular SPA over a bespoke
+      .NET-style REST API at /api, plus a SPARQL endpoint), harvested into data.europa.eu. It is not
+      CKAN — standard CKAN paths 404. The API route map was verified from the SPA JavaScript bundle,
+      and backend probes returned distinct 404/405 responses (vs the SPA catch-all), confirming /api
+      is a real backend prefix. However an F5 BIG-IP WAF blocked every direct /api call from both curl
+      and WebFetch (likely TLS/JA3 fingerprinting), so live JSON payloads and a dataset count could not
+      be captured. Endpoint existence is verified; response bodies are not.
+    endpoints:
+      - url: https://opendata.gov.al/api/Dataset/filter
+        status: blocked
+        note: POST search endpoint; exists (verified from JS bundle) but WAF-blocked for non-browser clients.
+      - url: https://opendata.gov.al/api/Sparql
+        status: blocked
+        note: SPARQL endpoint; returned 405 to GET (method not allowed), confirming it is a live backend route.
+      - url: https://opendata.gov.al/
+        status: 200
+        note: Portal home (SPA shell).
