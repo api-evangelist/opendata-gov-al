@@ -58,6 +58,8 @@ apis:
       - type: x-sparql-endpoint
         url: https://opendata.gov.al/api/Sparql
 common:
+  - type: DomainSecurity
+    url: security/opendata-gov-al-domain-security.yml
   - type: Website
     url: https://opendata.gov.al/
   - type: Review
