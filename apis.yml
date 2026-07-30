@@ -6,7 +6,18 @@ description: >-
   a dedicated SPARQL query endpoint, and it is harvested into the EU data portal (data.europa.eu). It is
   not CKAN or DKAN. Read endpoints live under the /api prefix using PascalCase, action-style routes.
 kind: government
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/opendata-gov-al.png
 url: https://raw.githubusercontent.com/api-evangelist/opendata-gov-al/refs/heads/main/apis.yml
 tags:
   - Open Data
