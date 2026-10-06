@@ -41,7 +41,7 @@ tags:
   - Albania
   - Europe
 created: '2026-06-23'
-modified: '2026-06-23'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
   - aid: opendata-gov-al:rest
@@ -80,6 +80,8 @@ apis:
       - type: x-sparql-endpoint
         url: https://opendata.gov.al/api/Sparql
 common:
+  - url: https://opendata.gov.al/blog/
+    type: Blog
   - type: DomainSecurity
     url: security/opendata-gov-al-domain-security.yml
   - type: Website
