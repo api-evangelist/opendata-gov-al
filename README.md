@@ -1,4 +1,4 @@
-# opendata.gov.al (opendata-gov-al)
+# opendata.gov.al (Open Data Albania)
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,24 +64,85 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-opendata.gov.al (Open Data Albania) is Albania's national government open-data portal — a **custom DCAT-AP-compliant platform** (Angular SPA over a bespoke REST API) with a SPARQL endpoint, harvested into data.europa.eu. It is **not** CKAN/DKAN.
+opendata.gov.al is the national government open-data portal for Albania (Open Data Albania). It is a custom, DCAT-AP-compliant platform (an Angular single-page-app front end over a bespoke REST API) with a dedicated SPARQL query endpoint, and it is harvested into the EU data portal (data.europa.eu). It is not CKAN or DKAN. Read endpoints live under the /api prefix using PascalCase, action-style routes.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/opendata-gov-al/refs/heads/main/apis.yml)
+**Areas:** Open Data · Custom Platform · DCAT-AP · SPARQL · Linked Data · Government Data · National Government · Albania · Europe
 
-## Type
-- **kind:** government  ·  **software:** custom (DCAT-AP, SPARQL)
+## opendata.gov.al (Open Data Albania) on APIs.io
 
-## API
-- **Open Data Albania REST API** — base `https://opendata.gov.al/api`. Action-style routes: `POST /api/Dataset/filter`, `GET /api/Dataset/get/{slug}`, `GET /api/DcatCategory`, `GET /api/Institution`.
-- **SPARQL endpoint** — `https://opendata.gov.al/api/Sparql`.
-- No public OpenAPI/Swagger located. Endpoint surface verified from the SPA JS bundle.
-- **Note:** the live site is behind an F5 BIG-IP WAF that blocks non-browser clients (TLS/JA3 fingerprinting), so JSON payloads were not retrievable from automated probes; endpoint existence is verified.
+Everything profiled for opendata.gov.al (Open Data Albania) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/opendata-gov-al/](https://apis.io/providers/opendata-gov-al/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
-- **Created:** 2026-06-23
-- **Modified:** 2026-06-23
+### APIs (2)
 
-## Maintainers
-**FN:** Kin Lane
+- [Open Data Albania REST API](https://apis.io/apis/opendata-gov-al/rest/) — Bespoke REST API for opendata.gov.al at same-origin /api, with action-style routes. Known endpoints include POST /api/Dataset/filter (dataset…
+- [Open Data Albania SPARQL endpoint](https://apis.io/apis/opendata-gov-al/sparql/) — SPARQL query endpoint for the linked-data / DCAT-AP graph powering the portal.
 
-**Email:** kin@apievangelist.com
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Opendata Gov Al Domain Security](https://apis.io/security/opendata-gov-al/opendata-gov-al-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://opendata.gov.al/)
+- [Blog](https://opendata.gov.al/blog/)
+
+## API Evangelist rating
+
+**Kin Score 6.0** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/opendata-gov-al/](https://apis.io/providers/opendata-gov-al/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for opendata.gov.al (Open Data Albania): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/opendata-gov-al/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
